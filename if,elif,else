@@ -1,0 +1,19 @@
+a=1
+b=3
+if a>b:
+    print("a is smallr than b")
+elif a<b:
+    print("a is smaller than b") 
+else:
+    print("b is smaller than a")  
+
+
+
+
+num=10
+if num%2==0:
+    print("even number")
+elif num%2==1:
+    print("odd number")
+else:
+    print("enter correct value")

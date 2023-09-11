@@ -1,0 +1,17 @@
+for i in range(10):
+    print(i)
+
+
+a='ravigadu'
+for i in a:
+     print(i)
+
+
+     #while
+
+     ravi=5
+     while ravi<8:
+          print('hello',ravi)
+          ravi+=1
+
+

@@ -1,0 +1,12 @@
+for num in range(1,15):
+    if num==8:
+        pass
+        print('ravi')
+    print(num) 
+
+
+
+for val in 'ravigadu':
+    if val=='g':
+        pass
+    print(val)
