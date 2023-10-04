@@ -1,0 +1,71 @@
+# write a python unpack a tuple into several variables
+
+r=(40,50,60)
+x,y,z=r
+print('x:',x)
+print('y:',y)
+print('z:',z)
+
+#write a python to add an item to a tuple 
+
+r=('ravi','koti','mani','thiru')
+x=list(r)
+print(x)
+x[1]='pullarao'
+y=tuple(x)
+print(x)
+
+# write a python to convert a tuple to a string
+
+tup=('r','a','v','i','n','d','r','a','b','a','b','u')
+str = ''.join(tup)
+print(str)
+
+# write a pythonget the specified element from last element of tuple
+
+tup=('r','a','v','i','g','a','d','u')
+print(tup)
+x=tup[7]
+print(x)
+
+# write a python to add member (s) to a set
+
+set={'a','v','i'}
+set.add('r')
+print(set)
+
+# write a python to create an intersection of sets
+
+a={'vijayawada','hyderabad','vizag'}
+b={'vijayawada','miryalaguda','hyderabad'}
+c=a.intersection(b)
+print(c)
+
+# write a python to create an union of sets 
+
+a={1,7,5,3,}
+b={2,4,6,8}
+c=a.union(b)
+print(c)
+
+# write a python to create set difference
+
+a={10,20,40,60,80,55}
+b={30,10,70,80,90,50}
+c=a.difference(b)
+d=b.difference(a)
+print(c)
+print(d)
+
+# write a python to create symmetric difference
+
+a={10,20,40,60,80,55}
+b={30,10,70,80,90,50}
+c=a.symmetric_difference(b)
+print(c)
+
+# write a python to find the maximum and minimum values in a set
+
+a={1,2,3,4,56,7,8,9}
+print(max(a))
+print(min(a))
