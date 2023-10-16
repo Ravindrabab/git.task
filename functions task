@@ -1,0 +1,80 @@
+#Python function that accepts aWrite a string and counts the number of upper and lower case letters.
+def count_upper_lower(string):
+    lowercase_letter_count=0
+    uppercase_letter_count=0
+    for letter in string:
+        if letter.isupper():
+           uppercase_letter_count += 1
+        elif letter.islower():
+            lowercase_letter_count += 1
+    return uppercase_letter_count,lowercase_letter_count
+input_string='Thequick Brow Fox'
+uppercase_letter_count,lowercase_letter_count=count_upper_lower(input_string)
+print('uppercase letters:',uppercase_letter_count)
+print('lowercase letters:',lowercase_letter_count)
+
+#2.Write a Python function that takes a list and returns a new list with distinct elements from the first list.
+def distinct_element(input_list):
+    distinct_list=list(set(input_list))
+    return distinct_list
+
+
+input_list =[1,2,3,4,5,3,2,6,7,7,8]
+distinct_element = distinct_element(input_list)
+print("Distinct elements:",distinct_element)
+
+#Write a Python function to check whether a string is a pangram or not.
+def pangram(input_string):
+    alphabet=set()
+    for char in input_string:
+        if char.isalpha():
+            alphabet.add(char.lower())
+    return len(alphabet)==26
+
+input_string = "the quick brown fox jumps over the lazy dog"
+result= pangram(input_string)
+if result:
+    print("the input string is pangram.")  
+else:
+    print("the input string is not pangram ")           
+    
+
+#4.Write a Python function to create and print a list where the values are the squares of numbers between 1 and 10 (both included).
+def print_sqares():
+    squares=[]
+    for i in range(1,10):
+        if i % 2 ==0:
+            squares.append(i**2)
+    return squares
+squares = print_sqares()
+print(squares)
+
+        
+
+#5.Write a Python function to sum all the numbers in a list.
+def sum_all_number(input_list):
+    total=0
+    for numbers in input_list:
+        if isinstance(numbers,(int,float)):
+         total += numbers
+    return total
+list=[8, 2, 3, 0, 7]
+result=sum_all_number(list)
+print("sum of numbers in the list:" ,result)
+
+
+
+#6.write a function to find sum of given values, pass values has variable number of arguments to function.
+
+def sum_values(*args):
+    return sum(args)
+
+result1 = sum_values(1, 2, 3, 4)
+result2 = sum_values(5, 6, 7)
+result3 = sum_values(8)
+result4 = sum_values()
+
+print("Sum of values (1, 2, 3, 4):", result1)
+print("Sum of values (5, 6, 7):", result2)
+print("Sum of a single value (8):", result3)
+print("Sum of no values:", result4)
