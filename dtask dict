@@ -1,0 +1,82 @@
+#.Write a Python script to add a key to a dictionary.
+d= {0:10,1:20}
+print(d)
+d.update({2:30})
+print(d)
+
+#.Write a Python script to check whether a given key already exists in a dictionary.
+a={'ravi':2,'koti':5,'mani':20}
+b='koti'
+keys=list(a)
+if b in keys:
+    print('already exists')
+else:
+    print('key not in a dictionary')  
+        
+ #write python program to iterative over dictionaries useing for loops 
+d={'a':'mango','b':'appele','c':'orange'}
+for i in d.items():
+    print(i)
+
+#write a python scriptto print a dictionary where the keys are between 1 and 15 values are the square of the keys
+d={}
+for i in range(1,15+1):
+    d[i]=(i**2)
+print(d)
+
+#write a python program to create a dictionary from a string 
+#Expected output: {'m': 1, 'a': 1, 'o': 3, 'l': 2, 'i': 1, 'x': 1, 't': 1, 'e': 1,'c': 1, 'h': 1, 'n': 1, 'g': 1,'y':1}
+string='marolix technology'
+string=string.replace(' ','')
+convert_list=list(string)
+reversed_list=convert_list[::-1]
+for i in reversed_list:
+    if(reversed_list.count(i))>1:
+        reversed_list.remove(i)
+    duplicat_removed_list=reversed_list[::-1]
+    result={}
+    for i in duplicat_removed_list:
+        count_1=convert_list.count(i)
+        result[i]=count_1
+print(result)
+
+#  Write a Python program to sum all the items in a dictionary.
+dict={'ravi':25,'koti':26,'mani':28}
+print(sum(dict.values()))
+
+#write a python program to combine two dictionary by adding values for common keys
+d1 = {'a': 100, 'b': 200, 'c':300}
+d2 = {'a': 300, 'b': 200, 'd':400}
+keys=list(d2)
+d3={}
+for i,j in d1.items():
+    if i in keys:
+     m=d2.get(i)
+    else:   
+     m=0
+    d3[i]=m+j
+print(d3)
+
+# .Write a Python program to access dictionary key's element by index.
+my_dict = {0: 'physics', 1: 'math', 2: 'chemistry'}
+
+keys_list = list(my_dict.keys())
+index = 1
+if index < len(keys_list):
+    key = keys_list[index]
+    value = my_dict[key]
+    print(value)
+else:
+    print("Index out of range")
+
+
+#Write a Python program to remove a key from a dictionary
+
+d1 = {'a': 100, 'b': 200, 'c':300}
+print(d1.pop("a"))
+print(d1)
+
+# Write a Python script to merge two Python dictionaries.d
+d1 = {'a': 100, 'b': 200, 'c':300}
+d2 = {'g': 300, 'e': 200, 'd':400}
+print(d1|d2)
