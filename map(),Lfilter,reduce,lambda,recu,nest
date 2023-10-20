@@ -1,0 +1,94 @@
+##map()
+#using map() list of numbers
+def myMapFunc(n):
+    return n*10
+l=[1,2,3,4,5,6,7,8,9,10,11]
+updated_list=map(myMapFunc,l)
+print(updated_list)
+print(list(updated_list))
+
+#Passing one Tuple and a list iterator to map()
+def myMapFunc(list1, tuple1):
+    return list1+"_"+tuple1
+
+my_list = ['a','b', 'c', 'd', 'e']
+my_tuple = ('ravi','thiru','koti','pullarao','mani')
+
+updated_list = map(myMapFunc, my_list,my_tuple)
+print(updated_list)
+print(list(updated_list))
+
+#Using map() with a string as an iterator
+def myMapFunc(s):
+    return s.lower()
+my_str = 'RAVi IS pytHON domIAN'
+updated_list = map(myMapFunc, my_str)
+print(updated_list)
+for i in updated_list:
+    print(i, end="")
+
+##filter()
+# Filter Function in Python with Lambda and Custom Function
+def multiple_of_3(num):
+    return num % 3 == 0
+numbers=[1,2,3,4,5,6,7,8,9,12,]
+result=list(filter(lambda x:multiple_of_3(x),numbers))
+print(result)
+
+#list of letters filter()
+letters=['r','a','v','i','g','u','r','u']
+def filter_vowels(letter):
+    vowels=['a','e','i','o','u']
+    if(letter in vowels):
+         return True
+    else:
+        return False
+filtered_vowels = filter(filter_vowels, letters)
+print('The filtered vowels are:')
+for vowel in filtered_vowels:
+
+    print(vowel)
+
+#duplicate in string filter()
+list1 = ["Python", "ravi", "koti", ]
+list2 = [  "Java", "koti", "siva", "mani"]
+def filterDuplicate(string_to_check):
+    if(string_to_check in l2):
+        return False
+    else:
+        return True
+l2 = list2
+out_filter = list(filter(filterDuplicate, list1))
+l2 = list1
+out_filter += list(filter(filterDuplicate, list2))
+print("The new filtered list is: ", out_filter)
+
+##lambda func
+def apply_function(func, x):
+    return func(x)
+add_one = lambda x: x + 1
+multiply_by_two = lambda x: x * 2
+square = lambda x: x ** 2
+result1 = apply_function(add_one, 2)  
+result2 = apply_function(multiply_by_two, 4)  
+result3 = apply_function(square, 5)  
+
+print(result1, result2, result3)
+
+ #given or equal not
+x=lambda a,b:'equal' if(a==b) else 'notequal'
+print(x(2,2))
+print(x(10,20))
+
+##recursion
+#adding elements by using recursiondef recursive_adding(x):
+
+def recursive_adding(x):
+        
+    if x==1:
+        return 1
+    else:
+        return(x+recursive_adding(x-1))
+n=10
+res=recursive_adding(list(n))
+print(res)
