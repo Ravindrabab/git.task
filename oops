@@ -1,0 +1,31 @@
+class employee():
+    company_name="marolix" 
+    def __init__(self):
+        self.employe_details={} 
+    @classmethod
+    def update_company_name(cls,cmp_name):  
+        cls.company_name=cmp_name
+    def add_employes(self,emp_name,emp_id,emp_domain,emp_gmail): 
+        self.employe_details[emp_id]={"employe_name :":emp_name,"emp_id":emp_id,"emp_domain":emp_domain,"emp_gmail":emp_gmail,"emp_company_name":employee.company_name}
+    def display_emp_details(self):
+        print(self.employe_details)
+    def delete_employe(self,emp_id):
+        del self.employe_details[emp_id]
+    def update_employes(self,emp_name,emp_id,emp_domain,emp_gmail):
+        self.employe_details[emp_id]={"employe_name :":emp_name,"emp_id":emp_id,"emp_domain":emp_domain,"emp_gmail":emp_gmail,"emp_company_name":employee.company_name}
+    def get_particular_emp_details(self,emp_id):
+        print(self.employe_details[emp_id])
+    
+
+
+
+e=employee()
+employee.update_company_name("marolix")
+e.add_employes("ravi","mt02054","python","ravi@gmail.com")
+employee.update_company_name("tcs")
+e.add_employes("koti","mt02055","java","koti@gmail.com")
+e.get_particular_emp_details('mt02055')
+e.delete_employe("mt02055")
+
+e.display_emp_details()
+
