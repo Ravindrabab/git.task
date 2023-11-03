@@ -16,13 +16,7 @@
 #           print(d[i])
 # employe_details()
 
-#
-def new_func():
-    class test:
-        a=10
-        print(id(a))
-        a=23
-        print(id(a))
+
 
 
 
