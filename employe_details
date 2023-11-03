@@ -1,0 +1,29 @@
+# def employe_details():
+#     d={}
+#     employe_entry=int(input('enter number of employes:'))
+#     for i in range(employe_entry):
+#         emp_name=input('enter the employe_name:')
+#         emp_id=input('enter the employe_id:')
+#         emp_mail=input('enter the employe_mail:')
+#         emp_domain=input('enter the employe_domain:')
+#         d[emp_id]={'name':emp_name,'id':emp_id,'mail':emp_mail,'domain':emp_domain}
+#         print(d)
+#     particular_employe_details=input('enter the employe_details:')
+#     for i in d:
+#         values=list(d[i].values())
+            
+#         if particular_employe_details in values:
+#           print(d[i])
+# employe_details()
+
+#
+def new_func():
+    class test:
+        a=10
+        print(id(a))
+        a=23
+        print(id(a))
+
+
+
+    
