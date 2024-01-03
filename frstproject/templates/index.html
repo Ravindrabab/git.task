@@ -1,0 +1,66 @@
+<!-- <h1>hello</h1>
+<h2>hello frnds</h2>
+<h3 style="color:blue">hi python </h3> -->
+
+<!-- <html>
+<body>
+
+<h1>The input element</h1>
+
+<form method='POST'>
+ {% csrf_token %}
+  <label for="name">name:</label>
+  <input type="text" name="name"><br><br>
+  <label for="domain"> domain:</label>
+  <input type="text" name="name"><br><br>
+  <label for="company"> company:</label>
+  <input type="text" company="company"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<div>
+  {% for emp in data%}
+    <p>{{emp.id}}</p>
+    <p>name - {{emp.name}}</p>
+    <p>domain - {{emp.domain}}</p>
+    <p>company - {{emp.company}}</p>
+ {% endfor %}   
+</div> 
+
+</body>
+</html> -->
+
+<html>
+<body>
+
+<h1>The input element</h1>
+
+<form method='POST'>
+ {% csrf_token %}
+  <label for="moviename"> moviename:</label>
+  <input type="text" moviename="moviename"><br><br>
+  <label for="budget"> budget:</label>
+  <input type="text" budget="budget"><br><br>
+  <label for="director"> director:</label>
+  <input type="text" director="director"><br><br>
+  <label for="heroname"> heroname:</label>
+  <input type="text" heroname="heroname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<div>
+  {% for mov in data%}
+    <p>{{mov.id}}</p>
+    <p>moviename - {{mov.moviename}}</p>
+    <p>budget - {{mov.budget}}</p>
+    <p>director - {{mov.director}}</p>
+    <p>heroname - {{mov.heroname}}</p>
+ {% endfor %}   
+</div>
+
+
+</body>
+</html>
+
+
+
+
